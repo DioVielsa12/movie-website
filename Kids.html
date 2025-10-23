@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/kids.css">
+    <title>Kids Movies - Movie Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DioBeceng21</a>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="Adults.html">Adults</a></li>
+            <li><a href="Kids.html" class="active">Kids</a></li>
+            <li><a href="Trend.html">Trend</a></li>
+            <li><a href="MyList.html">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search movie...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Kids Movies</h1>
+            <p>Family-friendly movies for all ages</p>
+        </div>
+
+        <div class="movies-grid">
+            <!-- Ne Zha -->
+            <div class="movie-card" data-movie="ne_zha">
+                <div class="movie-poster">
+                    <img src="./images/poster/ne_zha_poster.jpg" alt="Ne Zha">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>Ne Zha</h4>
+                            <p>2019 • 1h 50min • Adventure</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('ne_zha')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('ne_zha')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional kids movies can be added here -->
+            <!-- Example: Toy Story -->
+            <div class="movie-card" data-movie="toy_story">
+                <div class="movie-poster">
+                    <img src="./images/poster/toy_story_poster.jpg" alt="Toy Story">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>Toy Story</h4>
+                            <p>1995 • 1h 21min • Animation</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('toy_story')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('toy_story')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example: Frozen -->
+            <div class="movie-card" data-movie="frozen">
+                <div class="movie-poster">
+                    <img src="./images/poster/frozen_poster.jpg" alt="Frozen">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>Frozen</h4>
+                            <p>2013 • 1h 42min • Animation</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('frozen')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('frozen')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="trailer">
+        <video class="video" controls autoplay crossorigin="anonymous">
+            <track kind="subtitles" srclang="id" label="Bahasa Indonesia" default>
+        </video>
+        <img class="close" src="./images/icon/close.png" alt="" onclick="closeVideo()">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/kids.js"></script>
+</body>
+</html>

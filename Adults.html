@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/adults.css">
+    <title>Adults Movies - Movie Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DioBeceng21</a>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="Adults.html" class="active">Adults</a></li>
+            <li><a href="Kids.html">Kids</a></li>
+            <li><a href="Trend.html">Trend</a></li>
+            <li><a href="MyList.html">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search movie...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Adults Movies</h1>
+            <p>Movies for mature audiences (18+)</p>
+        </div>
+
+        <div class="movies-grid">
+            <!-- Seven -->
+            <div class="movie-card" data-movie="seven">
+                <div class="movie-poster">
+                    <img src="./images/poster/seven_poster.jpg" alt="Seven">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>Seven</h4>
+                            <p>1995 • 2h 7min • Thriller</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('seven')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('seven')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Godfather -->
+            <div class="movie-card" data-movie="the_godfather">
+                <div class="movie-poster">
+                    <img src="./images/poster/the_godfather_poster.jpg" alt="The Godfather">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>The Godfather</h4>
+                            <p>1972 • 2h 55min • Crime</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('the_godfather')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('the_godfather')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pulp Fiction -->
+            <div class="movie-card" data-movie="pulp_fiction">
+                <div class="movie-poster">
+                    <img src="./images/poster/pulp_fiction_poster.jpg" alt="Pulp Fiction">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>Pulp Fiction</h4>
+                            <p>1994 • 2h 34min • Crime</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('pulp_fiction')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('pulp_fiction')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- American History X -->
+            <div class="movie-card" data-movie="american_history_x">
+                <div class="movie-poster">
+                    <img src="./images/poster/american_history_x_poster.jpg" alt="American History X">
+                    <div class="movie-overlay">
+                        <div class="movie-info">
+                            <h4>American History X</h4>
+                            <p>1998 • 1h 59min • Drama</p>
+                            <div class="movie-actions">
+                                <button class="btn-watch" onclick="playMovie('american_history_x')">
+                                    <i class="fa fa-play"></i> Watch
+                                </button>
+                                <button class="btn-list" onclick="addToList('american_history_x')">
+                                    <i class="fa fa-plus"></i> My List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional adult movies can be added here -->
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="trailer">
+        <video class="video" controls autoplay crossorigin="anonymous">
+            <track kind="subtitles" srclang="id" label="Bahasa Indonesia" default>
+        </video>
+        <img class="close" src="./images/icon/close.png" alt="" onclick="closeVideo()">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/adults.js"></script>
+</body>
+</html>

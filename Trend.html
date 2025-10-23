@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/trend.css">
+    <title>Trending Movies - Movie Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DioBeceng21</a>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="Adults.html">Adults</a></li>
+            <li><a href="Kids.html">Kids</a></li>
+            <li><a href="Trend.html" class="active">Trend</a></li>
+            <li><a href="MyList.html">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search movie...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>Trending Now</h1>
+            <p>Most popular movies this week</p>
+        </div>
+
+        <div class="trending-section">
+            <div class="trending-movies">
+                <!-- Whiplash -->
+                <div class="trending-card" data-movie="whiplash">
+                    <div class="trending-rank">#1</div>
+                    <img src="./images/poster/whiplash_poster.jpg" alt="Whiplash">
+                    <div class="trending-info">
+                        <h4>Whiplash</h4>
+                        <p>2014 • Drama • 1h 46min</p>
+                        <div class="trending-stats">
+                            <span class="views"><i class="fa fa-eye"></i> 2.4M views</span>
+                        </div>
+                        <div class="movie-actions">
+                            <button class="btn-watch" onclick="playMovie('whiplash')">
+                                <i class="fa fa-play"></i> Watch
+                            </button>
+                            <button class="btn-list" onclick="addToList('whiplash')">
+                                <i class="fa fa-plus"></i> My List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ne Zha -->
+                <div class="trending-card" data-movie="ne_zha">
+                    <div class="trending-rank">#2</div>
+                    <img src="./images/poster/ne_zha_poster.jpg" alt="Ne Zha">
+                    <div class="trending-info">
+                        <h4>Ne Zha</h4>
+                        <p>2019 • Adventure • 1h 50min</p>
+                        <div class="trending-stats">
+                            <span class="views"><i class="fa fa-eye"></i> 1.8M views</span>
+                        </div>
+                        <div class="movie-actions">
+                            <button class="btn-watch" onclick="playMovie('ne_zha')">
+                                <i class="fa fa-play"></i> Watch
+                            </button>
+                            <button class="btn-list" onclick="addToList('ne_zha')">
+                                <i class="fa fa-plus"></i> My List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seven -->
+                <div class="trending-card" data-movie="seven">
+                    <div class="trending-rank">#3</div>
+                    <img src="./images/poster/seven_poster.jpg" alt="Seven">
+                    <div class="trending-info">
+                        <h4>Seven</h4>
+                        <p>1995 • Thriller • 2h 7min</p>
+                        <div class="trending-stats">
+                            <span class="views"><i class="fa fa-eye"></i> 1.5M views</span>
+                        </div>
+                        <div class="movie-actions">
+                            <button class="btn-watch" onclick="playMovie('seven')">
+                                <i class="fa fa-play"></i> Watch
+                            </button>
+                            <button class="btn-list" onclick="addToList('seven')">
+                                <i class="fa fa-plus"></i> My List
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="trailer">
+        <video class="video" controls autoplay crossorigin="anonymous">
+            <track kind="subtitles" srclang="id" label="Bahasa Indonesia" default>
+        </video>
+        <img class="close" src="./images/icon/close.png" alt="" onclick="closeVideo()">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/trend.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/mylist.css">
+    <title>My List - Movie Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DioBeceng21</a>
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="Adults.html">Adults</a></li>
+            <li><a href="Kids.html">Kids</a></li>
+            <li><a href="Trend.html">Trend</a></li>
+            <li><a href="MyList.html" class="active">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search movie...">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1>My List</h1>
+            <p>Your personal movie collection</p>
+        </div>
+
+        <div class="my-list-container"data-movie>
+            <div id="empty-list" class="empty-state">
+                <i class="fa fa-film"></i>
+                <h3>Your list is empty</h3>
+                <p>Start adding movies to your list by clicking the "+ My List" button on any movie</p>
+            </div>
+
+            <div id="movie-list" class="movies-grid" style="display: none;">
+                <!-- Movies will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div class="trailer">
+        <video class="video" controls autoplay crossorigin="anonymous">
+            <track kind="subtitles" srclang="id" label="Bahasa Indonesia" default>
+        </video>
+        <img class="close" src="./images/icon/close.png" alt="" onclick="closeVideo()">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/mylist.js"></script>
+</body>
+</html>
