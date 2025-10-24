@@ -59,16 +59,17 @@ header {
 
 .search {
     position: relative;
-    width: 200px;
-    height: 32px;
+    left: -56px;
+    width: 164px;
+    height: 50px;
 }
 
 
 .search-results {
     position: absolute;
-    top: 150%;
-    left: 0;
-    width: 128%;
+    top: 91%;
+    left: px;
+    width: 220px;
     background: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-top: none;
@@ -150,7 +151,7 @@ header {
 
 .search i {
     position: absolute;
-    top: 50%;
+    top: 32%;
     transform: translate(-50%);
     left: 22px;
     padding-right: 10px;
@@ -830,29 +831,92 @@ video::cue {
 
 /* Search results responsive fixes */
 @media (max-width: 768px) {
+    .search{
+        width: 150px;
+        height: 40px;
+        right: 35px;
+        order: 2;
+    }
     .search-results {
-        width: 300px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 200px !important;
+        top: 43px;
+        left: 0;
+        transform: none !important;
+    }
+
+    .search input {
+        font-size: 14px;
+        padding: 0 10px 0 40px !important;
+    }
+
+    .search i {
+        top: 54% !important;
+        transform: translateY(-50%) !important;
+        left: 10px;
+        padding-right: 8px;
+        font-size: 14px;
     }
     
     .search-result-item {
-        padding: 10px 12px;
+        padding: 8px 10px;
     }
     
     .search-result-item img {
-        width: 35px;
-        height: 50px;
+        width: 30px;
+        height: 45px;
     }
     
     .movie-title {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .movie-year {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .search {
+        width: 10px;
+        height: 36px;
+    }
+    
+    .search-results {
+        width: 130px !important;
+    }
+    
+    .search input {
+        font-size: 13px;
+        padding: 0 8px 0 35px !important;
+    }
+    
+    .search i {
+        left: 12px;
+        font-size: 13px;
+        padding-right: 6px;
+    }
+}
+
+/* Fix khusus untuk layar sangat kecil */
+@media (max-width: 360px) {
+    .search {
+        width: 120px;
+    }
+    
+    .search-results {
+        width: 120px !important;
+    }
+    
+    .search-result-item {
+        padding: 6px 8px;
+    }
+    
+    .search-result-item img {
+        width: 25px;
+        height: 40px;
+    }
+}
+
 
 /* Notification responsive */
 @media (max-width: 768px) {
