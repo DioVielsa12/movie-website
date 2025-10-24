@@ -303,7 +303,7 @@ header {
 .carousel .carousel-item img {
     max-width: 1000px;
     border-radius: 10px;
-    transform:  translateX(2px) translateY(-25px);
+    transform:  translateX(0px) translateY(-25px);
     object-fit: cover;
     object-position: center;
 }
@@ -784,11 +784,11 @@ video::cue {
 
 @media (max-width: 480px) {
     .carousel .carousel-item {
-        width: 110px;
+        width: 105px;
     }
     
     .carousel .carousel-item img {
-        max-width: 90px;
+        max-width: 200px;
     }
     
     .banner .content .button a {
@@ -877,6 +877,7 @@ video::cue {
 
 @media (max-width: 480px) {
     .search {
+        top: -10px;
         width: 110px;
         left: -28px;
         height: 36px;

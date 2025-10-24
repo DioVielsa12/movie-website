@@ -40,8 +40,9 @@ header {
 
 .page-header h1 {
     color: #fff;
-    font-size: 3.2em; /* Sedikit dikurangi dari 3.5em */
-    margin-bottom: 15px;
+    font-size: 3em; /* Sedikit dikurangi dari 3.5em */
+    margin-left: 0;
+    margin-bottom: 5px;
     font-weight: 800;
     line-height: 1.2; /* Tambahkan line-height */
     background: linear-gradient(135deg,  #F5AD18, #eb6339, #a07313, #fc0404);
@@ -72,7 +73,8 @@ header {
 /* Rest of the CSS remains the same */
 .movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+    justify-content: center;
     gap: 30px;
     margin-bottom: 50px;
     position: relative;
