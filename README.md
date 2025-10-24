@@ -1,1 +1,1 @@
-https://diovielsa12.github.io/movie-website/index.html
+https://diovielsa12.github.io/movie-website/
