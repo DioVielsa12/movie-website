@@ -685,7 +685,7 @@ video::cue {
     }
     
     .logo {
-        font-size: 24px;
+        font-size: 24px;   
     }
     
     .nav {
@@ -757,12 +757,12 @@ video::cue {
     }
     
     .carousel .carousel-item {
-        width: 120px;
+        width: 130px;
     }
     
     .carousel .carousel-item img {
-        max-width: 100px;
-        transform: translateX(0) translateY(-10px);
+        max-width: 140px;
+        transform: translateX(0) translateY(10px);
     }
     
     .play {
@@ -877,12 +877,13 @@ video::cue {
 
 @media (max-width: 480px) {
     .search {
-        width: 10px;
+        width: 110px;
+        left: -28px;
         height: 36px;
     }
     
     .search-results {
-        width: 130px !important;
+        width: 153px !important;
     }
     
     .search input {
@@ -891,9 +892,11 @@ video::cue {
     }
     
     .search i {
-        left: 12px;
-        font-size: 13px;
-        padding-right: 6px;
+        top: 60% !important;
+        transform: translateY(-50%) !important;
+        left: px;
+        padding-right: 4px;
+        font-size: 14px;
     }
 }
 
