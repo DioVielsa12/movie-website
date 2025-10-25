@@ -1,82 +1,70 @@
-// Common functions for movie pages
+// adults.js - Enhanced version dengan DoodStream
 function playMovie(movieKey) {
     const movie = movieData[movieKey];
-    if (movie && movies[movieKey]) {
-        const video = document.querySelector('.trailer .video');
-        const trailer = document.querySelector('.trailer');
-        
-        if (video && trailer) {
-            video.src = movies[movieKey];
-            video.querySelectorAll('track').forEach(track => track.remove());
-            
-            if (subtitles[movieKey]) {
-                const track = document.createElement("track");
-                track.kind = "subtitles";
-                track.label = "Bahasa Indonesia";
-                track.srclang = "id";
-                track.src = subtitles[movieKey];
-                track.default = true;
-                video.appendChild(track);
-            }
-            
-            video.load();
-            trailer.classList.add('active');
-            video.play();
-        }
+    if (!movie || !movie.doodstreamId) {
+        showNotification('Movie not available for streaming');
+        return;
     }
+
+    showDoodStreamPlayer(movie.doodstreamId, movie.title);
 }
 
-function addToList(movieKey) {
-    let myList = JSON.parse(localStorage.getItem('myList')) || [];
-    
-    if (!myList.includes(movieKey)) {
-        myList.push(movieKey);
-        localStorage.setItem('myList', JSON.stringify(myList));
-        
-        // Show success message
-        showNotification('Movie added to your list!');
-    } else {
-        showNotification('Movie already in your list!');
-    }
-}
-
-function showNotification(message) {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--primary);
-        color: white;
-        padding: 15px 20px;
-        border-radius: 5px;
-        z-index: 1000;
-        font-weight: 500;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+function showDoodStreamPlayer(doodstreamId, title) {
+    const videoHTML = `
+        <div class="video-player-overlay" onclick="closeVideoPlayer()">
+            <div class="video-player-container" onclick="event.stopPropagation()">
+                <div class="video-header">
+                    <h3>${title}</h3>
+                    <button class="close-btn" onclick="closeVideoPlayer()">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://doodstream.com/e/${doodstreamId}"
+                        frameborder="0" 
+                        allowfullscreen
+                        allow="autoplay; encrypted-media"
+                        scrolling="no"
+                    ></iframe>
+                </div>
+                <div class="video-info">
+                    <p>Streaming via DoodStream</p>
+                </div>
+            </div>
+        </div>
     `;
-    notification.textContent = message;
     
-    document.body.appendChild(notification);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.remove();
-    }, 3000);
+    showCustomVideoPlayer(videoHTML);
 }
 
-function closeVideo() {
-    const trailer = document.querySelector('.trailer');
-    const video = document.querySelector('.trailer .video');
+function showCustomVideoPlayer(htmlContent) {
+    let videoContainer = document.getElementById('custom-video-player');
     
-    if (trailer && video) {
-        trailer.classList.remove('active');
-        video.pause();
-        video.currentTime = 0;
+    if (!videoContainer) {
+        videoContainer = document.createElement('div');
+        videoContainer.id = 'custom-video-player';
+        videoContainer.className = 'custom-video-player';
+        document.body.appendChild(videoContainer);
     }
+    
+    videoContainer.innerHTML = htmlContent;
+    videoContainer.style.display = 'block';
+    document.body.style.overflow = 'hidden';
 }
 
-// Initialize search functionality
-document.addEventListener('DOMContentLoaded', function() {
-    initializeSearch();
+function closeVideoPlayer() {
+    const videoContainer = document.getElementById('custom-video-player');
+    if (videoContainer) {
+        videoContainer.style.display = 'none';
+        videoContainer.innerHTML = '';
+    }
+    document.body.style.overflow = 'auto';
+}
+
+// Keyboard support
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideoPlayer();
+    }
 });

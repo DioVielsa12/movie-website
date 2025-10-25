@@ -42,38 +42,38 @@ function toggleVideo(selectedMode = "trailer") {
 // ===========================
 //  Data Source - DIPERBAIKI
 // ===========================
-const trailers = {
-  seven: "./assets/Trailer/seven_trailer.mp4",
-  the_godfather: "./assets/Trailer/the_godfather_trailer.mp4",
-  whiplash: "./assets/Trailer/whiplash_trailer.mp4", // DITAMBAHKAN
-  pulp_fiction: "./assets/Trailer/pulp_fiction_trailer.mp4",
-  american_history_x: "./assets/Trailer/american_history_x_trailer.mp4",
-  ne_zha: "./assets/Trailer/ne_zha_trailer.mp4",
-  frozen: "./assets/Trailer/frozen_trailer.mp4",
-  toy_story: "./assets/Trailer/toy_story_trailer.mp4",
-};
+// const trailers = {
+//   seven: "./assets/Trailer/seven_trailer.mp4",
+//   the_godfather: "./assets/Trailer/the_godfather_trailer.mp4",
+//   whiplash: "./assets/Trailer/whiplash_trailer.mp4", // DITAMBAHKAN
+//   pulp_fiction: "./assets/Trailer/pulp_fiction_trailer.mp4",
+//   american_history_x: "./assets/Trailer/american_history_x_trailer.mp4",
+//   ne_zha: "./assets/Trailer/ne_zha_trailer.mp4",
+//   frozen: "./assets/Trailer/frozen_trailer.mp4",
+//   toy_story: "./assets/Trailer/toy_story_trailer.mp4",
+// };
 
-const movies = {
-  seven: "./assets/Movies/Seven_movie.mkv",
-  the_godfather: "./assets/Movies/The_Godfather_movie.mkv",
-  whiplash: "./assets/Movies/Whiplash_movie.mkv", // DITAMBAHKAN
-  pulp_fiction: "./assets/Movies/Pulp_Fiction_movie.mkv",
-  american_history_x: "./assets/Movies/American_History_X_movie.mkv",
-  ne_zha: "./assets/Movies/Ne_Zha_movie.mkv",
-  frozen: "./assets/Movies/Frozen_movie.mkv",
-  toy_story: "./assets/Movies/Toy_Story_movie.mkv",
-};
+// const movies = {
+//   seven: "./assets/Movies/Seven_movie.mkv",
+//   the_godfather: "./assets/Movies/The_Godfather_movie.mkv",
+//   whiplash: "./assets/Movies/Whiplash_movie.mkv", // DITAMBAHKAN
+//   pulp_fiction: "./assets/Movies/Pulp_Fiction_movie.mkv",
+//   american_history_x: "./assets/Movies/American_History_X_movie.mkv",
+//   ne_zha: "./assets/Movies/Ne_Zha_movie.mkv",
+//   frozen: "./assets/Movies/Frozen_movie.mkv",
+//   toy_story: "./assets/Movies/Toy_Story_movie.mkv",
+// };
 
-const subtitles = {
-  seven: "./assets/Subtitles/seven_id_subtitle.vtt",
-  the_godfather: "./assets/Subtitles/the_godfather_id_subtitle.vtt",
-  whiplash: "./assets/Subtitles/whiplash_id_subtitle.vtt", // DITAMBAHKAN
-  pulp_fiction: "./assets/Subtitles/pulp_fiction_id_subtitle.vtt",
-  american_history_x: "./assets/Subtitles/american_history_x_id_subtitle.vtt",
-  ne_zha: "./assets/Subtitles/ne_zha_id_subtitle.vtt",
-  frozen: "./assets/Subtitles/frozen_id_subtitle.vtt",
-  toy_story: "./assets/Subtitles/toy_story_id_subtitle.vtt",
-};
+// const subtitles = {
+//   seven: "./assets/Subtitles/seven_id_subtitle.vtt",
+//   the_godfather: "./assets/Subtitles/the_godfather_id_subtitle.vtt",
+//   whiplash: "./assets/Subtitles/whiplash_id_subtitle.vtt", // DITAMBAHKAN
+//   pulp_fiction: "./assets/Subtitles/pulp_fiction_id_subtitle.vtt",
+//   american_history_x: "./assets/Subtitles/american_history_x_id_subtitle.vtt",
+//   ne_zha: "./assets/Subtitles/ne_zha_id_subtitle.vtt",
+//   frozen: "./assets/Subtitles/frozen_id_subtitle.vtt",
+//   toy_story: "./assets/Subtitles/toy_story_id_subtitle.vtt",
+// };
 
 const movieData = {
     seven: {
@@ -84,7 +84,9 @@ const movieData = {
         genre: "Thriller",
         bg: "seven_bg.jpg",
         poster: "./images/poster/seven_poster.jpg",
-        searchTerms: ["seven", "7", "se7en", "thriller", "david fincher"]
+        searchTerms: ["seven", "7", "se7en", "thriller", "david fincher"],
+        doodstreamId: "rtnygsh0xcne", 
+        youtubeId: "KPOuJGkpblk"
     },
     the_godfather: {
         title: "The Godfather",
@@ -94,7 +96,9 @@ const movieData = {
         genre: "Crime",
         bg: "the_godfather_bg.jpg",
         poster: "./images/poster/the_godfather_poster.jpg",
-        searchTerms: ["godfather", "mafia", "crime", "corleone", "marlon brando"]
+        searchTerms: ["godfather", "mafia", "crime", "corleone", "marlon brando"],
+        doodstreamId: "2jxeectr2pi1", 
+        youtubeId: "UaVTIH8mujA"
     },
     whiplash: { // DITAMBAHKAN - SESUAI DENGAN HTML
         title: "Whiplash",
@@ -104,9 +108,10 @@ const movieData = {
         genre: "Drama",
         bg: "whiplash_bg.jpg",
         poster: "./images/poster/whiplash_poster.jpg",
-        searchTerms: ["whiplash", "drama", "music", "drummer", "jazz"]
+        searchTerms: ["whiplash", "drama", "music", "drummer", "jazz"],
+        doodstreamId: "6n8ir4jhxcxe", 
+        youtubeId: "7d_jQycdQGo"
     },
-
     frozen: {
         title: "Frozen",
         year: 2013,
@@ -115,9 +120,10 @@ const movieData = {
         genre: "Adventure",
         bg: "frozen_bg.jpg",
         poster: "./images/poster/frozen_poster.jpg",
-        searchTerms: ["frozen", "animation", "adventure", "comedy",]
+        searchTerms: ["frozen", "animation", "adventure", "comedy",],
+        doodstreamId: "iw8bjjnt6t1j", 
+        youtubeId: "TbQm5doF_Uc"
     },
-
     toy_story: {
         title: "Toy Story",
         year: 1995,
@@ -126,9 +132,10 @@ const movieData = {
         genre: "Adventure",
         bg: "toy_story_bg.jpg",
         poster: "./images/poster/toy_story_poster.jpg",
-        searchTerms: ["toy story", "animation", "adventure", "comedy",]
+        searchTerms: ["toy story", "animation", "adventure", "comedy",],
+        doodstreamId: "3ej0euxryg92", 
+        youtubeId: "v-PjgYDrg70"
     },
-
     ne_zha: {
         title: "Ne Zha",
         year: 2019,
@@ -137,7 +144,9 @@ const movieData = {
         genre: "Adventure",
         bg: "ne_zha_bg.jpg",
         poster: "./images/poster/ne_zha_poster.jpg",
-        searchTerms: ["ne zha", "nezha", "animation", "chinese", "adventure"]
+        searchTerms: ["ne zha", "nezha", "animation", "chinese", "adventure"],
+        doodstreamId: "jc4cs7pyr5vi", 
+        youtubeId: "Sup4GUf8vLo"
     },
     pulp_fiction: {
         title: "Pulp Fiction",
@@ -147,7 +156,9 @@ const movieData = {
         genre: "Crime",
         bg: "pulp_fiction_bg.jpg",
         poster: "./images/poster/pulp_fiction_poster.jpg",
-        searchTerms: ["pulp fiction", "tarantino", "crime", "john travolta"]
+        searchTerms: ["pulp fiction", "tarantino", "crime", "john travolta"],
+        doodstreamId: "zfnp0pemu68p", 
+        youtubeId: "s7kH1WYp_j8"
     },
     american_history_x: {
         title: "American History X",
@@ -157,7 +168,9 @@ const movieData = {
         genre: "Drama",
         bg: "american_history_x_bg.jpg",
         poster: "./images/poster/american_history_x_poster.jpg",
-        searchTerms: ["american history x", "drama", "racism", "edward norton"]
+        searchTerms: ["american history x", "drama", "racism", "edward norton"],
+        doodstreamId: "llz4bo95e95e", 
+        youtubeId: "XfQYHqsiN5g"
     }
 };
 
@@ -803,3 +816,131 @@ function changeBg(bg, title) {
 
     currentMovie = title;
 }
+
+// ===========================
+//  Enhanced Video Player System
+// ===========================
+
+let currentVideoType = ""; // 'movie' or 'trailer'
+
+function playMovie(movieKey) {
+    const movie = movieData[movieKey];
+    if (!movie || !movie.doodstreamId) {
+        showNotification('Movie not available for streaming');
+        return;
+    }
+
+    currentVideoType = "movie";
+    showVideoPlayer(movie.doodstreamId, "doodstream", movie.title);
+}
+
+function playTrailer(movieKey) {
+    const movie = movieData[movieKey];
+    if (!movie || !movie.youtubeId) {
+        showNotification('Trailer not available');
+        return;
+    }
+
+    currentVideoType = "trailer";
+    showVideoPlayer(movie.youtubeId, "youtube", `${movie.title} - Trailer`);
+}
+
+function showVideoPlayer(videoId, platform, title) {
+    // Create or update video player
+    let videoContainer = document.getElementById('custom-video-player');
+    
+    if (!videoContainer) {
+        videoContainer = document.createElement('div');
+        videoContainer.id = 'custom-video-player';
+        videoContainer.className = 'custom-video-player';
+        document.body.appendChild(videoContainer);
+    }
+
+    let videoHTML = '';
+    
+    if (platform === 'doodstream') {
+        videoHTML = `
+            <div class="video-player-overlay" onclick="closeVideoPlayer()">
+                <div class="video-player-container" onclick="event.stopPropagation()">
+                    <div class="video-header">
+                        <h3>${title}</h3>
+                        <button class="close-btn" onclick="closeVideoPlayer()">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://doodstream.com/e/${videoId}"
+                            frameborder="0" 
+                            allowfullscreen
+                            allow="autoplay; encrypted-media"
+                        ></iframe>
+                    </div>
+                    <div class="video-info">
+                        <p>Streaming via DoodStream</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (platform === 'youtube') {
+        videoHTML = `
+            <div class="video-player-overlay" onclick="closeVideoPlayer()">
+                <div class="video-player-container" onclick="event.stopPropagation()">
+                    <div class="video-header">
+                        <h3>${title}</h3>
+                        <button class="close-btn" onclick="closeVideoPlayer()">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+                            frameborder="0" 
+                            allowfullscreen
+                            allow="autoplay; encrypted-media; picture-in-picture"
+                        ></iframe>
+                    </div>
+                    <div class="video-info">
+                        <p>Trailer via YouTube</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    videoContainer.innerHTML = videoHTML;
+    videoContainer.style.display = 'block';
+    
+    // Add to body if not already there
+    if (!document.body.contains(videoContainer)) {
+        document.body.appendChild(videoContainer);
+    }
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVideoPlayer() {
+    const videoContainer = document.getElementById('custom-video-player');
+    if (videoContainer) {
+        videoContainer.style.display = 'none';
+        videoContainer.innerHTML = '';
+    }
+    
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+    
+    // Stop all videos
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        iframe.src = iframe.src; // Reload to stop video
+    });
+}
+
+// Keyboard support
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideoPlayer();
+    }
+});
+

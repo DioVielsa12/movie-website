@@ -266,12 +266,12 @@ header {
   font-size: 14px; 
 }
 
-.banner .content .button a:nth-child(2){
+.banner .content .button a:nth-child(3){
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.banner .content .button a:hover:nth-child(2){
+.banner .content .button a:hover:nth-child(3){
     background: var(--primary);
 }
 
@@ -992,5 +992,207 @@ video::cue {
 @media (max-width: 480px) {
     .carousel-box {
         min-height: 200px;
+    }
+}
+
+/* ===== CUSTOM VIDEO PLAYER STYLES ===== */
+.custom-video-player {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.video-player-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-player-container {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 50%;
+    max-width: 3000px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: videoSlideIn 0.3s ease-out;
+}
+
+@keyframes videoSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-header h3 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+.close-btn:hover {
+    background: var(--primary);
+    transform: rotate(90deg);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.video-info p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design untuk Video Player */
+@media (max-width: 768px) {
+    .video-player-container {
+        width: 95%;
+        border-radius: 10px;
+    }
+    
+    .video-header {
+        padding: 15px 20px;
+    }
+    
+    .video-header h3 {
+        font-size: 1.2em;
+    }
+    
+    .video-info {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-player-overlay {
+        padding: 10px;
+    }
+    
+    .video-player-container {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .video-header h3 {
+        font-size: 1.1em;
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+/* ===== PERBAIKAN TOMBOL UNTUK MOBILE ===== */
+@media (max-width: 768px) {
+    .banner .content .button {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 25px;
+    }
+    
+    .banner .content .button a {
+        margin-right: 0;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 12px 20px;
+        font-size: 14px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Tambahkan jarak khusus untuk tombol MY LIST */
+    .banner .content .button a:nth-child(3) {
+        margin-top: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .banner .content .button a:nth-child(3):hover {
+        background: var(--primary);
+        border-color: var(--primary);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .content .button {
+        gap: 12px;
+    }
+    
+    .banner .content .button a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .banner .content .button a i {
+        margin-right: 8px;
+        font-size: 12px;
     }
 }
