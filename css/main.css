@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary: #ff3700;
 }
 
-body { 
+body {
     background: #000000;
     font-family: 'Poppins', sans-serif;
 }
@@ -24,9 +24,9 @@ header {
     align-items: center;
     padding: 10px 100px;
     z-index: 10;
-    background:  #0f0f0f;
-    
+    background: #0f0f0f;
 }
+
 .logo {
     font-size: 35px;
     color: #ffffff;
@@ -63,7 +63,6 @@ header {
     width: 164px;
     height: 50px;
 }
-
 
 .search-results {
     position: absolute;
@@ -169,7 +168,6 @@ header {
     align-items: center;
     background: url(/images/background/seven_bg.jpg) no-repeat;
     background-size: cover;
-    /* background-position: center; */
     overflow: hidden;
     transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
@@ -262,22 +260,22 @@ header {
 }
 
 .banner .content .button a i {
-  margin-right: 10px;
-  font-size: 14px; 
+    margin-right: 10px;
+    font-size: 14px;
 }
 
-.banner .content .button a:nth-child(3){
+.banner .content .button a:nth-child(3) {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.banner .content .button a:hover:nth-child(3){
+.banner .content .button a:hover:nth-child(3) {
     background: var(--primary);
 }
 
 .banner .carousel-box {
     position: relative;
-    width: 800px; /* ubah dari min-width: 800px ke width tetap */
+    width: 800px;
     height: 290px;
     display: flex;
     justify-content: center;
@@ -290,11 +288,12 @@ header {
     margin-left: 80px;
 }
 
-.carousel{
+.carousel {
     position: relative;
     height: 260px;
     perspective: 740px;
 }
+
 .carousel .carousel-item {
     width: 160px;
     cursor: pointer;
@@ -303,7 +302,7 @@ header {
 .carousel .carousel-item img {
     max-width: 1000px;
     border-radius: 10px;
-    transform:  translateX(0px) translateY(-25px);
+    transform: translateX(0px) translateY(-25px);
     object-fit: cover;
     object-position: center;
 }
@@ -329,7 +328,7 @@ header {
     margin-right: 10px;
     font-size: 40px;
     cursor: pointer !important;
-} 
+}
 
 .play:hover {
     color: var(--primary);
@@ -364,7 +363,7 @@ header {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 100;
     width: 100%;
     height: 100%;
@@ -382,7 +381,7 @@ header {
     opacity: 1;
 }
 
-.trailer video{
+.trailer video {
     max-width: 900px;
     outline: none;
 }
@@ -396,34 +395,30 @@ header {
     max-width: 30px;
 }
 
-/* ===== Sinematik Subtitle Style ===== */
 video::cue {
-  background: transparent;                    /* Hilangkan latar belakang hitam */
-  color: #f5f5f5;                             /* Warna putih lembut */
-  font-family: 'Inter', sans-serif; /* Font modern & proporsional */
-  font-size: 25px;                            /* Ukuran pas untuk layar */
-  font-weight: 1000;
-  text-align: center;                         /* Selalu rata tengah */
-  line-height: 1.4;                           /* Jarak antar baris nyaman */
-  letter-spacing: 0.3px;                      /* Spasi antar huruf kecil */
-  text-shadow:
-    0 0 3px rgba(0, 0, 0, 0.8),
-    0 0 8px rgba(0, 0, 0, 0.6);              /* Bayangan lembut agar tetap terbaca */
+    background: transparent;
+    color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 1000;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     header {
         padding: 10px 50px;
     }
-    
+
     .banner {
         padding: 0 50px;
         flex-direction: column;
         justify-content: center;
         text-align: center;
     }
-    
+
     .carousel-box {
         width: 100% !important;
         margin-left: 0 !important;
@@ -436,41 +431,40 @@ video::cue {
         padding: 10px 20px;
         flex-wrap: wrap;
     }
-    
+
     .nav {
         order: 3;
         width: 100%;
         justify-content: center;
         margin-top: 10px;
     }
-    
+
     .search {
         width: 150px;
     }
-    
+
     .banner {
         padding: 0 20px;
     }
-    
+
     .content {
         max-width: 100%;
     }
-    
-    .play, .sci {
+
+    .play,
+    .sci {
         position: relative;
         bottom: auto;
         left: auto;
         right: auto;
         margin: 20px 0;
     }
-    
+
     .trailer video {
         max-width: 95%;
     }
 }
 
-
-/* Animation untuk neon glow */
 .search-result-neon {
     animation: neonPulse 1s ease-in-out 1;
     border: 2px solid transparent;
@@ -480,26 +474,21 @@ video::cue {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 55, 0, 0);
     }
+
     50% {
-        box-shadow: 
-            0 0 0 4px rgba(255, 55, 0, 0.3),
-            0 0 0 8px rgba(255, 55, 0, 0.2),
-            0 0 0 12px rgba(255, 55, 0, 0.1),
-            0 0 30px rgba(255, 55, 0, 0.4);
+        box-shadow: 0 0 0 4px rgba(255, 55, 0, 0.3), 0 0 0 8px rgba(255, 55, 0, 0.2), 0 0 0 12px rgba(255, 55, 0, 0.1), 0 0 30px rgba(255, 55, 0, 0.4);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(255, 55, 0, 0);
     }
 }
 
-/* ===== HOME PAGE RESPONSIVE STYLES ===== */
-
-/* Responsive Design for Home */
 @media (max-width: 1200px) {
     header {
         padding: 10px 50px;
     }
-    
+
     .banner {
         padding: 0 50px;
         flex-direction: column;
@@ -508,7 +497,7 @@ video::cue {
         min-height: auto;
         padding-bottom: 50px;
     }
-    
+
     .carousel-box {
         width: 100% !important;
         margin-left: 0 !important;
@@ -516,12 +505,12 @@ video::cue {
         height: auto;
         min-height: 250px;
     }
-    
+
     .content {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .banner .content h4 {
         justify-content: center;
         flex-wrap: wrap;
@@ -532,20 +521,20 @@ video::cue {
     .banner {
         background-position: center center !important;
     }
-    
+
     .carousel-box {
         width: 95% !important;
         margin: 40px auto 0 !important;
     }
-    
+
     .carousel {
         height: 240px;
     }
-    
+
     .carousel .carousel-item {
         width: 160px;
     }
-    
+
     .carousel .carousel-item img {
         max-width: 140px;
     }
@@ -557,12 +546,12 @@ video::cue {
         flex-wrap: wrap;
         position: relative;
     }
-    
+
     .logo {
         font-size: 28px;
         order: 1;
     }
-    
+
     .nav {
         order: 3;
         width: 100%;
@@ -570,88 +559,89 @@ video::cue {
         margin-top: 15px;
         flex-wrap: wrap;
     }
-    
+
     .nav li {
         margin: 5px 8px;
     }
-    
+
     .nav li a {
         font-size: 12px;
     }
-    
+
     .search {
         order: 2;
         width: 150px;
         height: 36px;
     }
-    
+
     .banner {
         padding: 80px 20px 40px;
         min-height: auto;
     }
-    
+
     .content {
         max-width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .movie-title {
         max-width: 200px;
         margin: 0 auto 20px;
     }
-    
+
     .banner .content h4 {
         font-size: 16px;
         justify-content: center;
         flex-wrap: wrap;
         gap: 5px;
     }
-    
+
     .banner .content h4 span {
         padding: 0 8px;
         margin: 2px 0;
     }
-    
+
     .banner .content p {
         font-size: 14px;
         line-height: 1.6;
         margin: 15px 0;
     }
-    
+
     .banner .content .button {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     .banner .content .button a {
         min-width: 120px;
         padding: 10px 15px;
         font-size: 12px;
     }
-    
+
     .carousel-box {
         width: 100% !important;
         margin: 30px auto 0 !important;
         height: auto;
         padding: 15px;
     }
-    
+
     .carousel {
         height: 200px;
         perspective: 500px;
     }
-    
+
     .carousel .carousel-item {
         width: 140px;
     }
-    
+
     .carousel .carousel-item img {
         max-width: 120px;
         transform: translateX(0) translateY(-15px);
     }
-    
-    .play, .sci {
+
+    .play,
+    .sci {
         position: relative;
         bottom: auto;
         left: auto;
@@ -659,21 +649,21 @@ video::cue {
         margin: 25px 0;
         justify-content: center;
     }
-    
+
     .play {
         font-size: 1em;
         margin-bottom: 20px;
     }
-    
+
     .play i {
         font-size: 30px;
     }
-    
+
     .sci {
         gap: 20px;
         margin-top: 20px;
     }
-    
+
     .sci a {
         font-size: 20px;
     }
@@ -683,100 +673,100 @@ video::cue {
     header {
         padding: 8px 15px;
     }
-    
+
     .logo {
-        font-size: 24px;   
+        font-size: 24px;
     }
-    
+
     .nav {
         margin-top: 10px;
     }
-    
+
     .nav li {
         margin: 3px 6px;
     }
-    
+
     .nav li a {
         font-size: 11px;
     }
-    
+
     .search {
         width: 130px;
         height: 32px;
     }
-    
+
     .search input {
         font-size: 12px;
         padding: 0 8px 0 35px !important;
     }
-    
+
     .search i {
         left: 18px;
         font-size: 12px;
     }
-    
+
     .banner {
         padding: 70px 15px 30px;
     }
-    
+
     .movie-title {
         max-width: 180px;
     }
-    
+
     .banner .content h4 {
         font-size: 14px;
     }
-    
+
     .banner .content h4 span {
         padding: 0 5px;
         font-size: 12px;
     }
-    
+
     .banner .content p {
         font-size: 13px;
         line-height: 1.5;
     }
-    
+
     .banner .content .button {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .banner .content .button a {
         width: 100%;
         max-width: 200px;
         justify-content: center;
     }
-    
+
     .carousel-box {
         padding: 10px;
     }
-    
+
     .carousel {
         height: 180px;
     }
-    
+
     .carousel .carousel-item {
         width: 130px;
     }
-    
+
     .carousel .carousel-item img {
         max-width: 140px;
         transform: translateX(0) translateY(10px);
     }
-    
+
     .play {
         font-size: 0.9em;
     }
-    
+
     .play i {
         font-size: 25px;
     }
-    
+
     .sci {
         gap: 15px;
     }
-    
+
     .sci a {
         font-size: 18px;
     }
@@ -786,16 +776,16 @@ video::cue {
     .carousel .carousel-item {
         width: 105px;
     }
-    
+
     .carousel .carousel-item img {
         max-width: 200px;
     }
-    
+
     .banner .content .button a {
         padding: 8px 12px;
         font-size: 11px;
     }
-    
+
     .search-results {
         width: 280px;
         left: 50%;
@@ -803,13 +793,12 @@ video::cue {
     }
 }
 
-/* Fix untuk video trailer responsive */
 @media (max-width: 768px) {
     .trailer video {
         max-width: 95%;
         max-height: 50vh;
     }
-    
+
     .close {
         top: 15px;
         right: 15px;
@@ -817,26 +806,24 @@ video::cue {
     }
 }
 
-/* Improved carousel responsiveness */
 .carousel-box {
     transition: all 0.3s ease;
 }
 
-/* Fix untuk background image responsive */
 .banner {
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
 }
 
-/* Search results responsive fixes */
 @media (max-width: 768px) {
-    .search{
+    .search {
         width: 150px;
         height: 40px;
         right: 35px;
         order: 2;
     }
+
     .search-results {
         width: 200px !important;
         top: 43px;
@@ -856,20 +843,20 @@ video::cue {
         padding-right: 8px;
         font-size: 14px;
     }
-    
+
     .search-result-item {
         padding: 8px 10px;
     }
-    
+
     .search-result-item img {
         width: 30px;
         height: 45px;
     }
-    
+
     .movie-title {
         font-size: 12px;
     }
-    
+
     .movie-year {
         font-size: 10px;
     }
@@ -882,16 +869,16 @@ video::cue {
         left: -28px;
         height: 36px;
     }
-    
+
     .search-results {
         width: 153px !important;
     }
-    
+
     .search input {
         font-size: 13px;
         padding: 0 8px 0 35px !important;
     }
-    
+
     .search i {
         top: 60% !important;
         transform: translateY(-50%) !important;
@@ -901,28 +888,25 @@ video::cue {
     }
 }
 
-/* Fix khusus untuk layar sangat kecil */
 @media (max-width: 360px) {
     .search {
         width: 120px;
     }
-    
+
     .search-results {
         width: 120px !important;
     }
-    
+
     .search-result-item {
         padding: 6px 8px;
     }
-    
+
     .search-result-item img {
         width: 25px;
         height: 40px;
     }
 }
 
-
-/* Notification responsive */
 @media (max-width: 768px) {
     .custom-notification {
         top: 70px;
@@ -934,51 +918,46 @@ video::cue {
     }
 }
 
-/* ===== TOUCH SUPPORT FOR CAROUSEL ===== */
 .carousel {
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling di iOS */
-    touch-action: pan-y; /* Enable vertical touch scroll */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 .carousel-item {
-    user-select: none; /* Prevent text selection on touch */
+    user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
 }
 
-/* Improve touch targets for mobile */
 @media (max-width: 768px) {
+
     .banner .content .button a,
     .carousel-item,
     .play,
     .sci a {
-        min-height: 44px; /* Minimum touch target size */
+        min-height: 44px;
     }
-    
+
     .carousel-item img {
         cursor: pointer;
     }
 }
 
-/* ===== PERFORMANCE OPTIMIZATIONS ===== */
 @media (max-width: 768px) {
     .banner::before {
-        background: rgba(0, 0, 0, 0.6); /* Sedikit lebih gelap untuk readability */
+        background: rgba(0, 0, 0, 0.6);
     }
-    
-    /* Reduce animations on mobile for better performance */
+
     .carousel .carousel-item img {
-        transition: transform 0.2s ease; /* Faster transition */
+        transition: transform 0.2s ease;
     }
-    
-    /* Simplify search results animation */
+
     .search-results {
-        backdrop-filter: none; /* Remove blur on mobile for performance */
+        backdrop-filter: none;
         background: rgba(0, 0, 0, 0.95);
     }
 }
 
-/* Prevent layout shifts */
 .carousel-box {
     min-height: 290px;
 }
@@ -995,7 +974,6 @@ video::cue {
     }
 }
 
-/* ===== CUSTOM VIDEO PLAYER STYLES ===== */
 .custom-video-player {
     display: none;
     position: fixed;
@@ -1036,6 +1014,7 @@ video::cue {
         opacity: 0;
         transform: scale(0.8) translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -1082,7 +1061,7 @@ video::cue {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
 }
 
 .video-wrapper iframe {
@@ -1107,21 +1086,20 @@ video::cue {
     font-size: 0.9em;
 }
 
-/* Responsive Design untuk Video Player */
 @media (max-width: 768px) {
     .video-player-container {
         width: 95%;
         border-radius: 10px;
     }
-    
+
     .video-header {
         padding: 15px 20px;
     }
-    
+
     .video-header h3 {
         font-size: 1.2em;
     }
-    
+
     .video-info {
         padding: 10px 20px;
     }
@@ -1131,12 +1109,12 @@ video::cue {
     .video-player-overlay {
         padding: 10px;
     }
-    
+
     .video-player-container {
         width: 100%;
         border-radius: 0;
     }
-    
+
     .video-header h3 {
         font-size: 1.1em;
         max-width: 70%;
@@ -1146,7 +1124,6 @@ video::cue {
     }
 }
 
-/* ===== PERBAIKAN TOMBOL UNTUK MOBILE ===== */
 @media (max-width: 768px) {
     .banner .content .button {
         display: flex;
@@ -1154,7 +1131,7 @@ video::cue {
         gap: 15px;
         margin-top: 25px;
     }
-    
+
     .banner .content .button a {
         margin-right: 0;
         width: 100%;
@@ -1166,15 +1143,14 @@ video::cue {
         display: flex;
         align-items: center;
     }
-    
-    /* Tambahkan jarak khusus untuk tombol MY LIST */
+
     .banner .content .button a:nth-child(3) {
         margin-top: 10px;
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
         transition: all 0.3s ease;
     }
-    
+
     .banner .content .button a:nth-child(3):hover {
         background: var(--primary);
         border-color: var(--primary);
@@ -1185,12 +1161,12 @@ video::cue {
     .banner .content .button {
         gap: 12px;
     }
-    
+
     .banner .content .button a {
         padding: 10px 15px;
         font-size: 13px;
     }
-    
+
     .banner .content .button a i {
         margin-right: 8px;
         font-size: 12px;

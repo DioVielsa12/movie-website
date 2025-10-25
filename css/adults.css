@@ -1,18 +1,12 @@
 /* Adults Page Specific Styles */
 header {
-   background-color: #470604 ;
+    background-color: #470604;
 }
 
 .page-container {
     padding: 120px 100px 50px;
     min-height: 100vh;
-    background: linear-gradient(
-        135deg,
-        #380303 0%,
-        #420303 30%,
-        #290505 70%,
-        #0c0c0c 100%
-    );
+    background: linear-gradient(135deg, #380303 0%, #420303 30%, #290505 70%, #0c0c0c 100%);
     position: relative;
     overflow: hidden;
 }
@@ -24,10 +18,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 55, 0, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 55, 0, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 80%, rgba(255, 55, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 55, 0, 0.05) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -40,19 +31,19 @@ header {
 
 .page-header h1 {
     color: #fff;
-    font-size: 3em; /* Sedikit dikurangi dari 3.5em */
+    font-size: 3em;
     margin-left: 0;
     margin-bottom: 5px;
     font-weight: 800;
-    line-height: 1.2; /* Tambahkan line-height */
-    background: linear-gradient(135deg,  #F5AD18, #eb6339, #a07313, #fc0404);
+    line-height: 1.2;
+    background: linear-gradient(135deg, #F5AD18, #eb6339, #a07313, #fc0404);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: gradientShift 4s ease infinite;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    padding: 0 20px; /* Tambahkan padding untuk safe area */
+    padding: 0 20px;
 }
 
 @keyframes gradientShift {
@@ -93,9 +84,7 @@ header {
 
 .movie-card:hover {
     transform: translateY(-10px);
-    box-shadow: 
-        0 20px 40px rgba(255, 55, 0, 0.3),
-        0 0 0 1px rgba(255, 55, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(255, 55, 0, 0.3), 0 0 0 1px rgba(255, 55, 0, 0.2);
     border: 1px solid rgba(255, 55, 0, 0.3);
 }
 
@@ -119,12 +108,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(20, 0, 0, 0.1) 30%,
-        rgba(40, 0, 0, 0.9) 100%
-    );
+    background: linear-gradient(to bottom, transparent 0%, rgba(20, 0, 0, 0.1) 30%, rgba(40, 0, 0, 0.9) 100%);
     display: flex;
     align-items: flex-end;
     padding: 20px;
