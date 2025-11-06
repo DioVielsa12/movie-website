@@ -100,7 +100,7 @@ const movieData = {
         doodstreamId: "2jxeectr2pi1", 
         youtubeId: "UaVTIH8mujA"
     },
-    whiplash: { // DITAMBAHKAN - SESUAI DENGAN HTML
+    whiplash: { 
         title: "Whiplash",
         year: 2014,
         rating: "16+",
@@ -109,7 +109,7 @@ const movieData = {
         bg: "whiplash_bg.jpg",
         poster: "./images/poster/whiplash_poster.jpg",
         searchTerms: ["whiplash", "drama", "music", "drummer", "jazz"],
-        doodstreamId: "6n8ir4jhxcxe", 
+        doodstreamId: "ydgj12xsydpq", 
         youtubeId: "7d_jQycdQGo"
     },
     frozen: {
@@ -121,7 +121,7 @@ const movieData = {
         bg: "frozen_bg.jpg",
         poster: "./images/poster/frozen_poster.jpg",
         searchTerms: ["frozen", "animation", "adventure", "comedy",],
-        doodstreamId: "iw8bjjnt6t1j", 
+        doodstreamId: "ap30vg5mbupt", 
         youtubeId: "TbQm5doF_Uc"
     },
     toy_story: {
@@ -133,7 +133,7 @@ const movieData = {
         bg: "toy_story_bg.jpg",
         poster: "./images/poster/toy_story_poster.jpg",
         searchTerms: ["toy story", "animation", "adventure", "comedy",],
-        doodstreamId: "3ej0euxryg92", 
+        doodstreamId: "i3qx1cysl69j", 
         youtubeId: "v-PjgYDrg70"
     },
     ne_zha: {

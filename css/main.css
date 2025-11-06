@@ -166,7 +166,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url(/images/background/seven_bg.jpg) no-repeat;
+    background: url(../images/background/seven_bg.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -275,8 +275,8 @@ header {
 
 .banner .carousel-box {
     position: relative;
-    width: 800px;
-    height: 290px;
+    width: 680px;
+    height: 330px;
     display: flex;
     justify-content: center;
     align-items: center;
