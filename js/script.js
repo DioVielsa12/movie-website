@@ -40,7 +40,7 @@ function toggleVideo(selectedMode = "trailer") {
 }
 
 // ===========================
-//  Data Source - DIPERBAIKI
+//  Data Source 
 // ===========================
 // const trailers = {
 //   seven: "./assets/Trailer/seven_trailer.mp4",
@@ -85,7 +85,7 @@ const movieData = {
         bg: "seven_bg.jpg",
         poster: "./images/poster/seven_poster.jpg",
         searchTerms: ["seven", "7", "se7en", "thriller", "david fincher"],
-        doodstreamId: "rtnygsh0xcne", 
+        doodstreamId: "wu2ordpbrxlp", 
         youtubeId: "KPOuJGkpblk"
     },
     the_godfather: {
@@ -97,7 +97,7 @@ const movieData = {
         bg: "the_godfather_bg.jpg",
         poster: "./images/poster/the_godfather_poster.jpg",
         searchTerms: ["godfather", "mafia", "crime", "corleone", "marlon brando"],
-        doodstreamId: "2jxeectr2pi1", 
+        doodstreamId: "oy4078cc46e9", 
         youtubeId: "UaVTIH8mujA"
     },
     whiplash: { 
@@ -109,7 +109,7 @@ const movieData = {
         bg: "whiplash_bg.jpg",
         poster: "./images/poster/whiplash_poster.jpg",
         searchTerms: ["whiplash", "drama", "music", "drummer", "jazz"],
-        doodstreamId: "ydgj12xsydpq", 
+        doodstreamId: "1dynz5rff2c9", 
         youtubeId: "7d_jQycdQGo"
     },
     frozen: {
@@ -121,7 +121,7 @@ const movieData = {
         bg: "frozen_bg.jpg",
         poster: "./images/poster/frozen_poster.jpg",
         searchTerms: ["frozen", "animation", "adventure", "comedy",],
-        doodstreamId: "ap30vg5mbupt", 
+        doodstreamId: "w3vb6zp612ne", 
         youtubeId: "TbQm5doF_Uc"
     },
     toy_story: {
@@ -133,7 +133,7 @@ const movieData = {
         bg: "toy_story_bg.jpg",
         poster: "./images/poster/toy_story_poster.jpg",
         searchTerms: ["toy story", "animation", "adventure", "comedy",],
-        doodstreamId: "i3qx1cysl69j", 
+        doodstreamId: "5hp4yirs9vz5", 
         youtubeId: "v-PjgYDrg70"
     },
     ne_zha: {
@@ -145,7 +145,7 @@ const movieData = {
         bg: "ne_zha_bg.jpg",
         poster: "./images/poster/ne_zha_poster.jpg",
         searchTerms: ["ne zha", "nezha", "animation", "chinese", "adventure"],
-        doodstreamId: "jc4cs7pyr5vi", 
+        doodstreamId: "t51ufkfh5t47", 
         youtubeId: "Sup4GUf8vLo"
     },
     pulp_fiction: {
@@ -157,7 +157,7 @@ const movieData = {
         bg: "pulp_fiction_bg.jpg",
         poster: "./images/poster/pulp_fiction_poster.jpg",
         searchTerms: ["pulp fiction", "tarantino", "crime", "john travolta"],
-        doodstreamId: "zfnp0pemu68p", 
+        doodstreamId: "999ekyt5iyy5", 
         youtubeId: "s7kH1WYp_j8"
     },
     american_history_x: {
@@ -169,7 +169,7 @@ const movieData = {
         bg: "american_history_x_bg.jpg",
         poster: "./images/poster/american_history_x_poster.jpg",
         searchTerms: ["american history x", "drama", "racism", "edward norton"],
-        doodstreamId: "llz4bo95e95e", 
+        doodstreamId: "1mgvhh5iy4o0", 
         youtubeId: "XfQYHqsiN5g"
     }
 };
@@ -333,7 +333,7 @@ function changeBg(bg, title) {
 }
 
 // ===========================
-//  My List Functionality - DITAMBAHKAN
+//  My List Functionality 
 // ===========================
 function addToList(movieKey) {
     let myList = JSON.parse(localStorage.getItem('myList')) || [];
